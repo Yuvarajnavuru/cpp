@@ -4,7 +4,7 @@ class student
 {
 public:
 string name;
-int regno,mark1,mark2,mark3;
+int regno, mark1,mark2,mark3,mark4;
 float avg;
 void input();
 void calculation();
@@ -16,32 +16,32 @@ cout<<"\n\nENTER THE STUDENT NAME => ";
 cin>>name;
 cout<<"\nENTER THE REGISTER NUMBER => ";
 cin>>regno;
-cout<<"\nMARK 1 => ";
+cout<<"\nEnter the marks in python => ";
 cin>>mark1;
-cout<<"\nMARK 2 => ";
+cout<<"\nEnter the mark in C => ";
 cin>>mark2;
-cout<<"\nMARK 3 => ";
+cout<<"\nEnter the mark in Maths => ";
 cin>>mark3;
+cout<<"\nEnter the mark in physics => ";
+cin>>mark4;
 }
 void student::calculation()
 {
-avg=(mark1+mark2+mark3)/3;
+avg=(mark1+mark2+mark3+mark4)/4;
 }
 void student::display()
 {
 cout<<"\nAVERAGE SCORE IS => "<<avg;
-if(avg>90)
-cout<<"\nS GRADE";
-if(avg>80 && avg<90)
-cout<<"\nA GRADE";
-if(avg>70 && avg<80)
-cout<<"\nC GRADE";
-if(avg>60 && avg<70)
-cout<<"\nD GRADE";
+if(avg>75)
+cout<<"\nDISTINCTION";
+if(avg>60 && avg<75)
+cout<<"\nfIRST DIVISION";
 if(avg>50 && avg<60)
-cout<<"\nE GRADE";
-if(avg<50)
-cout<<"\nF GRADE";
+cout<<"\nSECOND DIVISION";
+if(avg>40 && avg<50)
+cout<<"\nTHIRD DIVISION";
+if(avg<40)
+cout<<"\nFAIL";
 }
 int main()
 {
